@@ -13,25 +13,31 @@ Una aplicación web (MVP) diseñada para ofrecer una solución útil e innovador
 El motor analítico del simulador evalúa las siguientes variables y ecuaciones de forma algorítmica:
 
 ### 1. Variables de Entrada
-* **$\lambda$ (Lambda):** Tasa de llegada (ej. 50 personas/hora).
-* **$\mu$ (Mu):** Tasa de servicio por servidor (ej. 20 vacunados/hora por enfermero).
-* **$c$:** Número de servidores activos (enfermeros).
+* **λ (Lambda):** Tasa de llegada (ej. 50 personas/hora).
+* **μ (Mu):** Tasa de servicio por servidor (ej. 20 vacunados/hora por enfermero).
+* **c:** Número de servidores activos (enfermeros).
 
-### 2. Factor de Utilización ($\rho$) y Estabilidad
-* **$\rho = \frac{\lambda}{\mu}$**
-* **Condición de estabilidad:** $\frac{\rho}{c} < 1$. Si el cociente es $\ge 1$, el sistema colapsará provocando un tiempo de espera infinito.
+### 2. Factor de Utilización (ρ) y Estabilidad
+* **ρ = λ / μ**
+* **Condición de estabilidad:** ρ / c < 1. Si el cociente es >= 1, el sistema colapsará provocando un tiempo de espera infinito.
 
-### 3. Probabilidad de Sistema Vacío ($P_0$)
+### 3. Probabilidad de Sistema Vacío (P₀)
 Calcula la probabilidad de que no haya ninguna persona esperando o siendo atendida:
-$$ P_0 = \frac{1}{\sum_{n=0}^{c-1} \frac{\rho^n}{n!} + \frac{\rho^c}{c!} \left(\frac{1}{1 - \rho/c}\right)} $$
+```text
+P₀ = 1 / [ Σ(n=0 hasta c-1) (ρⁿ / n!) + (ρᶜ / c!) * (1 / (1 - ρ/c)) ]
+```
 
-### 4. Longitud Promedio de la Fila ($L_q$)
+### 4. Longitud Promedio de la Fila (Lq)
 Representa la cantidad esperada de personas esperando su turno en la carpa médica:
-$$ L_q = \left[ \frac{\rho^{c+1}}{(c-1)! (c-\rho)^2} \right] \times P_0 $$
+```text
+Lq = [ ρ^(c+1) / ((c-1)! * (c-ρ)²) ] * P₀
+```
 
-### 5. Tiempo Promedio de Espera en Fila ($W_q$)
+### 5. Tiempo Promedio de Espera en Fila (Wq)
 El tiempo que un damnificado pasará en la cola antes de recibir la vacuna:
-$$ W_q = \frac{L_q}{\lambda} $$
+```text
+Wq = Lq / λ
+```
 *(Nota: El sistema convierte automáticamente este valor resultante de horas a minutos para facilitar la interpretación del usuario).*
 
 ## 🛠️ Stack Tecnológico
