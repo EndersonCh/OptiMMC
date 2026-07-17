@@ -1,0 +1,8 @@
+{
+  "name": "SPA Builder",
+  "description": "Interactive step-by-step React SPA builder.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
