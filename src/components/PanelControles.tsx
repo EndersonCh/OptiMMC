@@ -16,6 +16,7 @@ export default function PanelControles({ lambda, setLambda, mu, setMu, c, setC }
           <label className="block text-sm font-medium text-slate-700 mb-1">Tasa de llegada (λ)</label>
           <input 
             type="number" 
+            min="1"
             value={lambda}
             onChange={(e) => setLambda(Number(e.target.value))}
             className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900" 
@@ -26,6 +27,7 @@ export default function PanelControles({ lambda, setLambda, mu, setMu, c, setC }
           <label className="block text-sm font-medium text-slate-700 mb-1">Tasa de servicio (μ)</label>
           <input 
             type="number" 
+            min="1"
             value={mu}
             onChange={(e) => setMu(Number(e.target.value))}
             className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900" 
@@ -36,6 +38,7 @@ export default function PanelControles({ lambda, setLambda, mu, setMu, c, setC }
           <label className="block text-sm font-medium text-slate-700 mb-1">Número de servidores (c)</label>
           <input 
             type="number" 
+            min="1"
             value={c}
             onChange={(e) => setC(Number(e.target.value))}
             className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900" 

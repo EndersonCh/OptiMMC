@@ -6,6 +6,10 @@ export function simularModeloMMC(lambda: number, mu: number, c: number) {
     return resultado;
   }
   
+  if (mu <= 0 || c <= 0) {
+    return { isStable: false, capacidad: 0 };
+  }
+  
   const rho = lambda / mu;
   const estabilidad= (rho / c)
   const isStable = estabilidad < 1;
