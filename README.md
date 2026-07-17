@@ -1,12 +1,7 @@
-# VacuFlow: Simulador Logístico M/M/c 💉
-
-**Universidad Nacional Experimental del Táchira (UNET)**  
-**Departamento de Ingeniería Informática**  
-**Asignatura:** Investigación de Operaciones II  
-**Equipo de Trabajo:** Enderson Chávez, Jessica Ramírez, [Nombre del 3er integrante]
+# OptiMMC
 
 ## 📌 Descripción del Proyecto
-Una aplicación web (MVP) diseñada para ofrecer una solución útil e innovadora en la mitigación de crisis humanitarias. Basada en la Teoría de Colas (Modelo M/M/c), la herramienta permite calcular en tiempo real la cantidad óptima de servidores médicos (enfermeros) necesarios en un centro de vacunación post-desastre, garantizando que los tiempos de espera no superen los 10 minutos y evitando aglomeraciones peligrosas.
+Una aplicación web (MVP) diseñada para ofrecer una solución útil e innovadora en la mitigación de crisis humanitarias. Basada en el Modelo M/M/c de la Teoría de Colas, la herramienta permite calcular en tiempo real la cantidad óptima de servidores médicos (enfermeros) necesarios en un centro de vacunación post-desastre, garantizando que los tiempos de espera no superen los 10 minutos y evitando aglomeraciones peligrosas.
 
 ## ⚙️ Características Principales
 * **Calculadora M/M/c:** Ingreso interactivo de tasa de llegadas ($\lambda$), tasa de servicio ($\mu$) y número de servidores ($c$).
